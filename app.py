@@ -32,13 +32,6 @@ def set_cookies():
 
     return resp
 
-@app.route('/deletecookies', methods=['DELETE'])
-def delete_cookies():
-
-    resp = make_response("Cookie 'username' has been deleted")
-    resp.set_cookie('username', '', expires=0)
-
-    return resp
 
 if __name__ == '__main__':
     app.run(debug=True)
